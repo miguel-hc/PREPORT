@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFiscal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f685fac2-dfd8-4ccc-9bd8-300b1b342fd1">
+	<property name="ireport.zoom" value="1.9487171000000034"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="ventas" class="java.lang.String"/>
+	<parameter name="impuesto" class="java.lang.String"/>
+	<parameter name="iva" class="java.lang.String"/>
+	<parameter name="totalimpuesto" class="java.lang.String"/>
+	<parameter name="totalcobro" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="59" width="107" height="20" uuid="d12a7078-a387-412e-86a0-83d3526930ca"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LORENA HERNANDEZ LOPEZ]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="86" y="39" width="40" height="20" uuid="c104488c-1fdf-43dd-8f27-52bb11355bbc"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="44" y="0" width="84" height="20" uuid="7f272786-ba4b-4734-b2d0-db50d83fee3b"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tienda 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="44" y="41" width="84" height="20" uuid="1c048e83-b426-4ae0-b907-d7ac36b0c5cc"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MAYOREO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="0" width="81" height="20" uuid="3f545e57-5bc7-4ee5-8957-fc05862ac84a"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobacion Fiscal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="67" y="23" width="46" height="20" uuid="a001ba67-634b-4b72-9cec-77e8c57d1bb5"/>
+				<textElement>
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="352" splitType="Stretch">
+			<staticText>
+				<reportElement x="6" y="11" width="38" height="20" uuid="232f88f1-c429-4ba2-a84a-0caaaea0d777"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ventas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="11" width="53" height="20" uuid="9bd8abfa-5e2c-43e3-90e5-181553d629cf"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ventas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="31" width="71" height="20" uuid="8684eacd-77df-4ebf-9c1b-e311a99d1491"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[- Descuentos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="31" width="53" height="20" uuid="46c179d3-9fa6-4377-9bb5-cb9a06c647e2"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[0.00]]></text>
+			</staticText>
+			<line>
+				<reportElement x="6" y="58" width="145" height="1" uuid="3b358bf9-1f15-43fc-8a98-3654987836b0"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="70" width="38" height="20" uuid="3a2cdec4-de74-407f-8842-25c0be3fd03c"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ventas netas]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="70" width="53" height="20" uuid="d6078e9c-a832-460f-b2d5-20a21e4f92bd"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ventas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="90" width="71" height="20" uuid="ffc7da8d-f068-4c0a-acd0-dee720f1e5a4"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[+Impuesto 1 al 8%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="90" width="53" height="20" uuid="c1c12fe3-b277-47fc-820a-b46d875feea1"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{impuesto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="116" width="145" height="1" uuid="7b6553ef-9fbd-41fc-8869-f57679b0416b"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="129" width="71" height="20" uuid="5ae32722-59ba-49e4-91e3-1b58f035bab8"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de impuesto 1]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="129" width="53" height="20" uuid="8828ccf7-96a9-4278-98f0-605186158afc"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{impuesto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="6" y="149" width="71" height="20" uuid="210d8778-4862-4f50-ac4f-b0e76b594ef5"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[+IVA al 16%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="149" width="53" height="20" uuid="a5b8ad09-1d26-4671-bc48-c3a75492cbac"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{iva}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="177" width="145" height="1" uuid="b138f9c8-027d-4285-8ed5-0653ed71c44a"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="189" width="71" height="20" uuid="7d04215b-ae4b-4b9c-9bf4-48b16b87a8d0"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de IVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="6" y="209" width="71" height="20" uuid="f6167af3-be7f-47e2-b91c-8ece3e2fb132"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de Impuesto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="209" width="65" height="20" uuid="92e0d502-c549-434f-b5af-365a76091ccb"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalimpuesto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="238" width="145" height="1" uuid="39721f57-719f-4fa1-a62b-6b198f8140d1"/>
+			</line>
+			<staticText>
+				<reportElement x="6" y="253" width="71" height="20" uuid="95b6cf42-d77e-4630-b592-8acc043e1fd6"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cobrado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="253" width="53" height="20" uuid="a7175704-98fa-485f-8045-92f8c4f495da"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalcobro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="189" width="65" height="20" uuid="b6f27299-2e21-4ddd-a2b0-4a35ee67e944"/>
+				<textElement>
+					<font size="5" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{iva}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CortesZ" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0e9216a4-6d55-422b-a9aa-98d7e8eeca43">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="tienda" class="java.lang.String"/>
+	<parameter name="corte" class="java.lang.String"/>
+	<parameter name="ncortez" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<parameter name="totalanterior" class="java.lang.String"/>
+	<parameter name="totalacumulado" class="java.lang.String"/>
+	<field name="Fecha" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="26" width="218" height="20" uuid="b5cca3f4-978b-4670-a48c-235f54c0b940"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LORENA HERNANDEZ LOPEZ]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="178" y="6" width="55" height="20" uuid="da065daa-4d22-4fb9-bbf1-b50086071671"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="89" y="6" width="100" height="20" uuid="e4a29070-ea33-4537-80ec-a37f07784db9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tienda 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="33" width="100" height="20" uuid="e9a8fdef-3336-4927-837b-d8c09fdbd324"/>
+				<textElement>
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Corte Z]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="233" height="1" uuid="8f7ceb51-43ba-478e-8a3b-ddd718154a40"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="50" width="233" height="1" uuid="3937ef86-97e2-4a95-b7d2-b0726ed0898f"/>
+			</line>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="78" y="12" width="111" height="20" uuid="409fb755-267f-4836-9aa1-1571147fd0a6"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="197" splitType="Stretch">
+			<staticText>
+				<reportElement x="15" y="10" width="74" height="20" uuid="a575a9b6-7d78-4013-8e6e-b7782c1365eb"/>
+				<text><![CDATA[Corte Z número]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="10" width="100" height="20" uuid="4ae7bf9c-eb18-4648-b52d-cb1b487becf3"/>
+				<textFieldExpression><![CDATA[$P{ncortez}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="40" width="85" height="20" uuid="ad9bb0f0-49ad-4537-b39c-ffe5f5d02f05"/>
+				<text><![CDATA[Fecha del corte : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="40" width="100" height="20" uuid="7486aa44-eca4-4cc2-9d7f-0cb58fcd0da9"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="71" width="85" height="20" uuid="4cb6144e-e40a-487b-9599-c5877396405d"/>
+				<text><![CDATA[Gran total anterior:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="71" width="100" height="20" uuid="100f9d0e-3bdf-476a-aa90-36f64ab8e685"/>
+				<textFieldExpression><![CDATA[$P{totalanterior}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="105" width="85" height="20" uuid="d5aa625e-d7f1-4a50-b2f2-8b698389c35e"/>
+				<text><![CDATA[ventas diarias:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="105" width="100" height="20" uuid="8391474a-9a0c-4a99-8310-44f34db9545f"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="136" width="233" height="1" uuid="785696b8-836d-4fb0-bbe2-fc595111120e"/>
+			</line>
+			<staticText>
+				<reportElement x="15" y="148" width="99" height="20" uuid="c69f9dbe-0e02-441c-a908-1818fcb1bae9"/>
+				<text><![CDATA[Gran tot. acumulado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="114" y="148" width="100" height="20" uuid="97bf68b6-5a6a-4302-b888-420bf71814d9"/>
+				<textFieldExpression><![CDATA[$P{totalacumulado}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="184" width="233" height="1" uuid="77552a9f-cba3-41b8-badd-4c53d74345c3"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

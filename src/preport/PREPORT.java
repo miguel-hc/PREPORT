@@ -4,6 +4,7 @@ package preport;
 import com.conexion.Conexion;
 import com.controller.ReporteFiscalController;
 import com.view.Home;
+import com.view.Reporte;
 import com.view.ReporteFiscal;
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -25,11 +26,9 @@ public class PREPORT {
     public static void main(String[] args) throws SQLException, JRException {
         
         Conexion con = new Conexion();
-        Home h = new Home();
-        //h.setVisible(true);
         
-        ReporteFiscal rfv = new ReporteFiscal();
-        rfv.setVisible(true);
+        Reporte reporte = new Reporte();
+        reporte.setVisible(true);
         
         Date d = new Date();
         Calendar c = new GregorianCalendar();
@@ -47,7 +46,7 @@ public class PREPORT {
         }
         
         ReporteFiscalController rf = new ReporteFiscalController();
-        rf.getVentas("");
+        rf.getVentas("09/05/2022");
         
         
     }
