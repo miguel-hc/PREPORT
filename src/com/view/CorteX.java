@@ -169,6 +169,7 @@ public class CorteX extends javax.swing.JFrame {
         }else { monthvar2 = monthvar+"";}
         
         String fecha = datevar2+"/"+monthvar2+"/"+yearvar;
+        String fecha2 = datevar2+"."+monthvar2+"."+yearvar;
 
         try{
             String path = System.getProperty("user.dir")+"/CortesX.jasper";
@@ -189,14 +190,14 @@ public class CorteX extends javax.swing.JFrame {
                 //JOptionPane.showMessageDialog(null, "No se encontro Abono");
             }else{abonos = corteCaja.getAbonoSae(fecha).get(0).getAbonoSae();}
             
-            if (corteCaja.getCorteZAspelCaja("2",nCorte).isEmpty()){
-                //JOptionPane.showMessageDialog(null, "venta del dia es igual a $0");
+            if (corteCaja.getCorteZAspelCaja(fecha2,nCorte).isEmpty()){
+                JOptionPane.showMessageDialog(null, "EL NUMERO DE CORTE NO COINCIDE CON LA FECHA.... \n FAVOR DE VERIFICARLO.....");
                 ventaActual = 0;
                 totalAnterio = 0;
             }else {
-                ventaActual = corteCaja.getCorteZAspelCaja("---",nCorte).get(0).getTotalActual();
-                System.out.println(corteCaja.getCorteZAspelCaja("---",nCorte).get(0).getTotalActual());
-                totalAnterio = corteCaja.getCorteZAspelCaja("---",nCorte).get(0).getTotalAnterio();
+                ventaActual = corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalActual();
+                System.out.println(corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalActual());
+                totalAnterio = corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalAnterio();
             }
             
             totalVentaandAbonos = ventaActual + abonos;

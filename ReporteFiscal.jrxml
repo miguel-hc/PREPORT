@@ -22,9 +22,9 @@
 				<text><![CDATA[LORENA HERNANDEZ LOPEZ]]></text>
 			</staticText>
 			<textField pattern="dd MMMMM yyyy">
-				<reportElement x="86" y="39" width="40" height="20" uuid="c104488c-1fdf-43dd-8f27-52bb11355bbc"/>
+				<reportElement x="67" y="46" width="65" height="13" uuid="1d16679f-6458-433d-9abf-13a517a939c8"/>
 				<textElement>
-					<font size="8"/>
+					<font size="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

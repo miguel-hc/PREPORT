@@ -22,13 +22,13 @@ public class CorteZAspelCaja {
     java.sql.ResultSet rs = null;
     Conexion con = new Conexion();
     
-    public ArrayList<CorteZModel> getCorteZAspelCaja(String Ncaja, String FolioCorte) throws SQLException{
+    public ArrayList<CorteZModel> getCorteZAspelCaja(String fecha, String FolioCorte) throws SQLException{
     
         ArrayList DatoCorte = new ArrayList();
         CorteZModel model;
         
         s = con.getConnection().createStatement();
-        rs = s.executeQuery("select cortexz02.fecha, cortexz02.totalact, cortexz02.totalant from cortexz02 where cortexz02.folioxz = '"+FolioCorte+"' and cortexz02.cajero = '003';");
+        rs = s.executeQuery("select cortexz02.fecha, cortexz02.totalact, cortexz02.totalant from cortexz02 where cortexz02.folioxz = '"+FolioCorte+"' and cortexz02.cajero = '003' and cortexz02.fecha = '"+fecha+"' ;");
         while(rs.next()){
             model = new CorteZModel(rs.getString("fecha"),rs.getDouble("totalact"),rs.getDouble("totalant"),0,0);
             System.out.println(rs.getString("totalact"));
