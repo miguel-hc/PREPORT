@@ -28,7 +28,7 @@ public class CorteZAspelCaja {
         CorteZModel model;
         
         s = con.getConnection().createStatement();
-        rs = s.executeQuery("select cortexz02.fecha, cortexz02.totalact, cortexz02.totalant from cortexz02 where cortexz02.folioxz = '"+FolioCorte+"' and cortexz02.cajero = '003' and cortexz02.fecha = '11.05.2022' and vventas.tipodocsae = 'P';");
+        rs = s.executeQuery("select cortexz02.fecha, cortexz02.totalact, cortexz02.totalant from cortexz02 where cortexz02.folioxz = '"+FolioCorte+"' and cortexz02.cajero = '003';");
         while(rs.next()){
             model = new CorteZModel(rs.getString("fecha"),rs.getDouble("totalact"),rs.getDouble("totalant"),0,0);
             System.out.println(rs.getString("totalact"));
