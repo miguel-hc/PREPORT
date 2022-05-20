@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFiscal" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f685fac2-dfd8-4ccc-9bd8-300b1b342fd1">
 	<property name="ireport.zoom" value="1.9487171000000034"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="96"/>
 	<parameter name="fecha" class="java.lang.String"/>
 	<parameter name="ventas" class="java.lang.String"/>
 	<parameter name="impuesto" class="java.lang.String"/>
@@ -94,7 +94,7 @@
 				<textElement>
 					<font size="5" isBold="true"/>
 				</textElement>
-				<text><![CDATA[0.00]]></text>
+				<text><![CDATA[$0.00]]></text>
 			</staticText>
 			<line>
 				<reportElement x="6" y="58" width="145" height="1" uuid="3b358bf9-1f15-43fc-8a98-3654987836b0"/>

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.view;
 
 import com.controller.CorteZ;
@@ -35,6 +31,8 @@ public class ReporteFiscal extends javax.swing.JFrame {
         initComponents();
     }
 
+    Reporte reporte = new Reporte();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,15 +42,20 @@ public class ReporteFiscal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jfecha = new com.toedter.calendar.JCalendar();
         btnsalir = new javax.swing.JButton();
         btnaceptar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
+
+        jPanel1.setBackground(new java.awt.Color(20, 56, 63));
 
         btnsalir.setBackground(new java.awt.Color(255, 51, 51));
-        btnsalir.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnsalir.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnsalir.setForeground(new java.awt.Color(255, 255, 255));
         btnsalir.setText("Salir");
         btnsalir.setBorder(null);
@@ -63,7 +66,7 @@ public class ReporteFiscal extends javax.swing.JFrame {
         });
 
         btnaceptar.setBackground(new java.awt.Color(0, 204, 204));
-        btnaceptar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnaceptar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         btnaceptar.setForeground(new java.awt.Color(255, 255, 255));
         btnaceptar.setText("Aceptar");
         btnaceptar.setBorder(null);
@@ -74,45 +77,68 @@ public class ReporteFiscal extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Fecha Corte:");
+
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("V 2022.05.18");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(184, 184, 184)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(21, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(16, 16, 16)
+                .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(288, Short.MAX_VALUE)
-                .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(187, 187, 187)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(14, 14, 14)
-                .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
+        Reporte reporte = new Reporte();
+        reporte.setInstancia(false);
+        reporte.setInstancia(false);
         this.setVisible(false);
     }//GEN-LAST:event_btnsalirActionPerformed
 
@@ -132,69 +158,85 @@ public class ReporteFiscal extends javax.swing.JFrame {
         int datevar = cal.get(Calendar.DATE);
         int monthvar = cal.get(Calendar.MONTH);
         int yearvar = cal.get(Calendar.YEAR);
-        
-        monthvar = monthvar+1;
-        
-        if(datevar < 10){
-            datevar2 = datevar+"";
-            datevar2 = "0"+datevar2;
-        }else { datevar2 = datevar+""; }
-        
-        if (monthvar < 10){
-            monthvar2 = monthvar+"";
-            monthvar2 = "0"+monthvar2;
-        }else { monthvar2 = monthvar+"";}
-        
-        String fecha = datevar2+"/"+monthvar2+"/"+yearvar;
-        
-        try{
-            String path = System.getProperty("user.dir")+"/ReporteFiscal.jasper";
+
+        monthvar = monthvar + 1;
+
+        if (datevar < 10) {
+            datevar2 = datevar + "";
+            datevar2 = "0" + datevar2;
+        } else {
+            datevar2 = datevar + "";
+        }
+
+        if (monthvar < 10) {
+            monthvar2 = monthvar + "";
+            monthvar2 = "0" + monthvar2;
+        } else {
+            monthvar2 = monthvar + "";
+        }
+
+        String fecha = datevar2 + "/" + monthvar2 + "/" + yearvar;
+
+        try {
+            String path = System.getProperty("user.dir") + "/ReporteFiscal.jasper";
             HashMap parametros = new HashMap();
             rmodel = new ReporteFiscalController();
             corteCaja = new CorteZAspelCaja();
             double ventas, impuesto, iva, totalimpuesto, totalcobro, abonos, impuestoabono;
-            
-            if (rmodel.getVentas(fecha).isEmpty()){
+
+            if (rmodel.getVentas(fecha).isEmpty()) {
                 ventas = 0;
-                JOptionPane.showMessageDialog(null, "");
-            }else {ventas = rmodel.getVentas(fecha).get(0).getVentas();}
-           
-            if (rmodel.getImpuesto(fecha).isEmpty()){impuesto = 0;}
-            else{impuesto = rmodel.getImpuesto(fecha).get(0).getImpuesto();}
-            
-            if (rmodel.getIva(fecha).isEmpty()){iva = 0;}
-            else{iva = rmodel.getIva(fecha).get(0).getIva();}
-            
-            if (corteCaja.getAbonoSae(fecha).isEmpty()){
+                //JOptionPane.showMessageDialog(null, "");
+            } else {
+                ventas = rmodel.getVentas(fecha).get(0).getVentas();
+            }
+
+            if (rmodel.getImpuesto(fecha).isEmpty()) {
+                impuesto = 0;
+            } else {
+                impuesto = rmodel.getImpuesto(fecha).get(0).getImpuesto();
+            }
+
+            if (rmodel.getIva(fecha).isEmpty()) {
+                iva = 0;
+            } else {
+                iva = rmodel.getIva(fecha).get(0).getIva();
+            }
+
+            if (corteCaja.getAbonoSae(fecha).isEmpty()) {
                 abonos = 0;
                 impuestoabono = 0;
-                JOptionPane.showMessageDialog(null, "");
-            }else{
+                JOptionPane.showMessageDialog(null, "DIA SIN AVONOS");
+            } else {
                 abonos = corteCaja.getAbonoSae(fecha).get(0).getAbonoSae();
                 impuestoabono = corteCaja.getAbonoSae(fecha).get(0).getImpuestoabono();
             }
-            
-            
-            //impuesto = impuesto * 0.08;
-            impuestoabono = impuestoabono * 0.25;
-            totalimpuesto = (impuesto) + (iva) + (impuestoabono);
-            double inpmenos = totalimpuesto * 0.08;
-            ventas = (ventas) + (abonos) - (totalimpuesto) - (impuestoabono);
-            totalcobro = (totalimpuesto) + (ventas) + (impuestoabono);
 
-            System.out.println(impuestoabono);
-            
-            parametros.put("ventas", dollarFormat.format(ventas+impuestoabono));
-            parametros.put("fecha", fecha);
-            parametros.put("impuesto", dollarFormat.format(totalimpuesto * 0.08));
-            parametros.put("iva", dollarFormat.format(impuestoabono - inpmenos));
-            parametros.put("totalimpuesto", dollarFormat.format(totalimpuesto+impuesto));
-            parametros.put("totalcobro", dollarFormat.format(totalcobro));
-            
-            JasperPrint jprint = JasperFillManager.fillReport(path, parametros, new JREmptyDataSource());
-            JasperViewer viewer = new JasperViewer(jprint, false);
-            viewer.setVisible(true);
-        }catch(JRException e){ 
+            if (rmodel.getVentas(fecha).isEmpty() && corteCaja.getAbonoSae(fecha).isEmpty()) {
+                JOptionPane.showMessageDialog(null, "NO SE ENCONTRARON DATOS :( ...");
+            } else {
+                impuestoabono = impuestoabono * 0.25;
+                totalimpuesto = (impuesto) + (iva) + (impuestoabono);
+                double inpmenos = totalimpuesto * 0.08;
+                ventas = (ventas) + (abonos) - (totalimpuesto) - (impuestoabono);
+                totalcobro = (totalimpuesto) + (ventas) + (impuestoabono);
+
+                System.out.println(impuestoabono);
+
+                parametros.put("ventas", dollarFormat.format(ventas + impuestoabono));
+                parametros.put("fecha", fecha);
+                parametros.put("impuesto", dollarFormat.format(totalimpuesto * 0.08));
+                parametros.put("iva", dollarFormat.format(totalimpuesto - inpmenos));
+                parametros.put("totalimpuesto", dollarFormat.format(totalimpuesto + impuesto));
+                parametros.put("totalcobro", dollarFormat.format(totalcobro));
+
+                JasperPrint jprint = JasperFillManager.fillReport(path, parametros, new JREmptyDataSource());
+                JasperViewer viewer = new JasperViewer(jprint, false);
+                viewer.setVisible(true);
+            }
+            //impuesto = impuesto * 0.08;
+
+        } catch (JRException e) {
             System.out.print(e.toString());
         } catch (SQLException ex) {
             Logger.getLogger(ReporteFiscal.class.getName()).log(Level.SEVERE, null, ex);
@@ -240,6 +282,8 @@ public class ReporteFiscal extends javax.swing.JFrame {
     private javax.swing.JButton btnaceptar;
     private javax.swing.JButton btnsalir;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private com.toedter.calendar.JCalendar jfecha;
     // End of variables declaration//GEN-END:variables
 }

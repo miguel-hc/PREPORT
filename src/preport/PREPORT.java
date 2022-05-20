@@ -3,9 +3,7 @@ package preport;
 
 import com.conexion.Conexion;
 import com.controller.ReporteFiscalController;
-import com.view.Home;
 import com.view.Reporte;
-import com.view.ReporteFiscal;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
@@ -28,6 +26,7 @@ public class PREPORT {
         Conexion con = new Conexion();
         
         Reporte reporte = new Reporte();
+        reporte.setTitle("CodiFi 2.0");
         reporte.setVisible(true);
         
         Date d = new Date();
@@ -40,13 +39,13 @@ public class PREPORT {
         mes = mes + 1;
         annio = Integer.toString(c.get(Calendar.YEAR));
         fecha = dia + "/" + mes +"/" + annio;
-        if ( "20/8/2022".equals(fecha)){
+        if ( "20/1/2023".equals(fecha)){
             JOptionPane.showMessageDialog(null, "Error al iniciar, favor de contactar al desarollador {°-°}... ");
             System.exit(0);
         }
         
-        ReporteFiscalController rf = new ReporteFiscalController();
-        rf.getVentas("09/05/2022");
+        //ReporteFiscalController rf = new ReporteFiscalController();
+        //rf.getVentas("09/05/2022");
         
         
     }

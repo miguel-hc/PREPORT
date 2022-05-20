@@ -59,12 +59,9 @@
 			<line>
 				<reportElement x="0" y="50" width="233" height="1" uuid="3937ef86-97e2-4a95-b7d2-b0726ed0898f"/>
 			</line>
-			<textField pattern="dd/MM/yyyy">
-				<reportElement x="78" y="12" width="111" height="20" uuid="409fb755-267f-4836-9aa1-1571147fd0a6"/>
-				<textElement>
-					<font size="15" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			<textField>
+				<reportElement x="83" y="14" width="100" height="20" uuid="4f0e4ac5-8c2f-4d56-9149-28195a8dc574"/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
 			</textField>
 		</band>
 	</columnHeader>
@@ -75,7 +72,7 @@
 				<text><![CDATA[Corte Z número]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="100" y="10" width="100" height="20" uuid="4ae7bf9c-eb18-4648-b52d-cb1b487becf3"/>
+				<reportElement x="112" y="10" width="100" height="20" uuid="4ae7bf9c-eb18-4648-b52d-cb1b487becf3"/>
 				<textFieldExpression><![CDATA[$P{ncortez}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -83,7 +80,7 @@
 				<text><![CDATA[Fecha del corte : ]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="100" y="40" width="100" height="20" uuid="7486aa44-eca4-4cc2-9d7f-0cb58fcd0da9"/>
+				<reportElement x="112" y="40" width="100" height="20" uuid="7486aa44-eca4-4cc2-9d7f-0cb58fcd0da9"/>
 				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -91,7 +88,7 @@
 				<text><![CDATA[Gran total anterior:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="100" y="71" width="100" height="20" uuid="100f9d0e-3bdf-476a-aa90-36f64ab8e685"/>
+				<reportElement x="112" y="71" width="100" height="20" uuid="100f9d0e-3bdf-476a-aa90-36f64ab8e685"/>
 				<textFieldExpression><![CDATA[$P{totalanterior}]]></textFieldExpression>
 			</textField>
 			<staticText>
@@ -99,7 +96,7 @@
 				<text><![CDATA[ventas diarias:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="100" y="105" width="100" height="20" uuid="8391474a-9a0c-4a99-8310-44f34db9545f"/>
+				<reportElement x="112" y="105" width="100" height="20" uuid="8391474a-9a0c-4a99-8310-44f34db9545f"/>
 				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
 			</textField>
 			<line>
@@ -110,7 +107,7 @@
 				<text><![CDATA[Gran tot. acumulado:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="114" y="148" width="100" height="20" uuid="97bf68b6-5a6a-4302-b888-420bf71814d9"/>
+				<reportElement x="126" y="148" width="100" height="20" uuid="97bf68b6-5a6a-4302-b888-420bf71814d9"/>
 				<textFieldExpression><![CDATA[$P{totalacumulado}]]></textFieldExpression>
 			</textField>
 			<line>

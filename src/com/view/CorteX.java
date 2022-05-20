@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.view;
 
 import com.controller.CorteZ;
@@ -43,21 +39,26 @@ public class CorteX extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         btngenerar = new javax.swing.JButton();
         jfecha = new com.toedter.calendar.JCalendar();
         jButton1 = new javax.swing.JButton();
         jnumerocorte = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(20, 56, 63));
+
         btngenerar.setBackground(new java.awt.Color(0, 204, 204));
-        btngenerar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btngenerar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btngenerar.setForeground(new java.awt.Color(255, 255, 255));
         btngenerar.setText("Aceptar");
         btngenerar.setBorder(null);
+        btngenerar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btngenerar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btngenerarActionPerformed(evt);
@@ -65,66 +66,89 @@ public class CorteX extends javax.swing.JFrame {
         });
 
         jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Salir");
         jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jnumerocorte.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Numero de Corte:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fecha corte:");
+
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("V 2022.05.18");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jnumerocorte, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jnumerocorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1, 1, 1)
+                .addComponent(jLabel3))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jnumerocorte))
-                        .addGap(60, 60, 60))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jnumerocorte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jfecha, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -136,14 +160,17 @@ public class CorteX extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(CorteX.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_btngenerarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Reporte reporte = new Reporte();
+        reporte.setInstancia(false);
+        System.out.println(reporte.getInstanci());
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    public void getReporte() throws SQLException{
+    public void getReporte() throws SQLException {
         double granTotal = 0;
         double totalVentaandAbonos = 0;
         String nCorte = "";
@@ -155,73 +182,79 @@ public class CorteX extends javax.swing.JFrame {
         int datevar = cal.get(Calendar.DATE);
         int monthvar = cal.get(Calendar.MONTH);
         int yearvar = cal.get(Calendar.YEAR);
-        
-        monthvar = monthvar+1;
-        
-        if(datevar < 10){
-            datevar2 = datevar+"";
-            datevar2 = "0"+datevar2;
-        }else { datevar2 = datevar+""; }
-        
-        if (monthvar < 10){
-            monthvar2 = monthvar+"";
-            monthvar2 = "0"+monthvar2;
-        }else { monthvar2 = monthvar+"";}
-        
-        String fecha = datevar2+"/"+monthvar2+"/"+yearvar;
-        String fecha2 = datevar2+"."+monthvar2+"."+yearvar;
 
-        try{
-            String path = System.getProperty("user.dir")+"/CortesX.jasper";
+        monthvar = monthvar + 1;
+
+        if (datevar < 10) {
+            datevar2 = datevar + "";
+            datevar2 = "0" + datevar2;
+        } else {
+            datevar2 = datevar + "";
+        }
+
+        if (monthvar < 10) {
+            monthvar2 = monthvar + "";
+            monthvar2 = "0" + monthvar2;
+        } else {
+            monthvar2 = monthvar + "";
+        }
+
+        String fecha = datevar2 + "/" + monthvar2 + "/" + yearvar;
+        String fecha2 = datevar2 + "." + monthvar2 + "." + yearvar;
+
+        try {
+            String path = System.getProperty("user.dir") + "/CortesX.jasper";
             HashMap parametros = new HashMap();
             corteCaja = new CorteZAspelCaja();
             nCorte = jnumerocorte.getValue().toString();
-            
+
             Locale usa = new Locale("en", "US");
             Currency dollars = Currency.getInstance(usa);
             NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
-            
-            
+
             double ventaActual = 0;
             double totalAnterio = 0;
             double abonos = 0;
-            if (corteCaja.getAbonoSae(fecha).isEmpty()){
+            if (corteCaja.getAbonoSae(fecha).isEmpty()) {
                 abonos = 0;
                 //JOptionPane.showMessageDialog(null, "No se encontro Abono");
-            }else{abonos = corteCaja.getAbonoSae(fecha).get(0).getAbonoSae();}
-            
-            if (corteCaja.getCorteZAspelCaja(fecha2,nCorte).isEmpty()){
+            } else {
+                abonos = corteCaja.getAbonoSae(fecha).get(0).getAbonoSae();
+            }
+
+            if (corteCaja.getCorteZAspelCaja(fecha2, nCorte).isEmpty()) {
                 JOptionPane.showMessageDialog(null, "EL NUMERO DE CORTE NO COINCIDE CON LA FECHA.... \n FAVOR DE VERIFICARLO.....");
                 ventaActual = 0;
                 totalAnterio = 0;
-            }else {
-                ventaActual = corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalActual();
-                System.out.println(corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalActual());
-                totalAnterio = corteCaja.getCorteZAspelCaja(fecha2,nCorte).get(0).getTotalAnterio();
+            } else {
+                ventaActual = corteCaja.getCorteZAspelCaja(fecha2, nCorte).get(0).getTotalActual();
+                System.out.println(corteCaja.getCorteZAspelCaja(fecha2, nCorte).get(0).getTotalActual());
+                totalAnterio = corteCaja.getCorteZAspelCaja(fecha2, nCorte).get(0).getTotalAnterio();
             }
-            
-            totalVentaandAbonos = ventaActual + abonos;
-            
-            granTotal = totalVentaandAbonos + totalAnterio;
-            
-            parametros.put("ncortez",nCorte );
-            parametros.put("fecha", fecha);
-            parametros.put("totalanterior",dollarFormat.format(totalAnterio));
-            parametros.put("total", dollarFormat.format(totalVentaandAbonos));
-            parametros.put("totalacumulado", dollarFormat.format(granTotal));
-            
-            JasperPrint jprint = JasperFillManager.fillReport(path, parametros, new JREmptyDataSource());
-            JasperViewer viewer = new JasperViewer(jprint, false);
-            viewer.setVisible(true);
-            System.out.println(dollarFormat.format(granTotal));
-            
-        }catch(JRException e){
+
+            if (corteCaja.getAbonoSae(fecha).isEmpty() && corteCaja.getCorteZAspelCaja(fecha2, nCorte).isEmpty()) {
+                JOptionPane.showMessageDialog(null, "NO SE ENCONTRARON DATOS :( ...");
+            } else {
+                totalVentaandAbonos = ventaActual + abonos;
+                granTotal = totalVentaandAbonos + totalAnterio;
+
+                parametros.put("ncortez", nCorte);
+                parametros.put("fecha", fecha);
+                parametros.put("totalanterior", dollarFormat.format(totalAnterio));
+                parametros.put("total", dollarFormat.format(totalVentaandAbonos));
+                parametros.put("totalacumulado", dollarFormat.format(granTotal));
+
+                JasperPrint jprint = JasperFillManager.fillReport(path, parametros, new JREmptyDataSource());
+                JasperViewer viewer = new JasperViewer(jprint, false);
+                viewer.setVisible(true);
+                System.out.println(dollarFormat.format(granTotal));
+            }
+
+        } catch (JRException e) {
             System.out.print(e.toString());
         }
     }
-    
-    
-    
+
     /**
      * @param args the command line arguments
      */
@@ -263,6 +296,8 @@ public class CorteX extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
     private com.toedter.calendar.JCalendar jfecha;
     private javax.swing.JSpinner jnumerocorte;
     // End of variables declaration//GEN-END:variables
